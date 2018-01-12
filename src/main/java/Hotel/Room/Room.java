@@ -1,4 +1,4 @@
-package Hotel.Rooms;
+package Hotel.Room;
 import Hotel.Guest;
 
 import java.util.ArrayList;

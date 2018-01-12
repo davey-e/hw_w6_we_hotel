@@ -1,4 +1,4 @@
-import Hotel.Rooms.*;
+import Hotel.Room.Bedroom;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,4 +17,5 @@ public class BedroomTest {
     public void hasRoomNumber(){
         assertEquals(1, bedroom.getRoomNumber());
     }
+
 }

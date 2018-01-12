@@ -1,4 +1,4 @@
-import Hotel.Rooms.*;
+import Hotel.Room.Room;
 import org.junit.Before;
 import org.junit.Test;
 
