@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 public class Room {
 
-    int capacity;
-    ArrayList<Guest> guests;
+    private int capacity;
+    private ArrayList<Guest> guests;
 
 
     public Room(int capacity){
@@ -18,5 +18,9 @@ public class Room {
 
     public int getCapacity() {
         return capacity;
+    }
+
+    public int getNumberOfGuests() {
+        return guests.size();
     }
 }

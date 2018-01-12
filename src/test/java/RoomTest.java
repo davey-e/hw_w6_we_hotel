@@ -18,4 +18,9 @@ public class RoomTest {
     public void hasCapacity(){
         assertEquals(1, room.getCapacity());
     }
+
+    @Test
+    public void guestsArrayListStartsEmpty(){
+        assertEquals(0, room.getNumberOfGuests());
+    }
 }
