@@ -1,7 +1,9 @@
+package Hotel;
+
 public class Guest {
 
-    String name;
-    double wallet;
+    private String name;
+    private double wallet;
 
     public Guest(String name, double wallet){
         this.name = name;
