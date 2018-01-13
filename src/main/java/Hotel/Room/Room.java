@@ -17,10 +17,25 @@ public class Room {
     }
 
     public int getCapacity() {
-        return capacity;
+        return this.capacity;
     }
 
     public int getNumberOfGuests() {
-        return guests.size();
+        return this.guests.size();
+    }
+
+    public void addGuestToGuestsArrayList(Guest guest){
+        this.guests.add(guest);
+    }
+
+    public void CheckInMultipleGuests(ArrayList<Guest> guestsToCheckIn) {
+        int numberOfGuestsToCheckIn = guestsToCheckIn.size();
+        if (getNumberOfGuests() == 0){
+            if (numberOfGuestsToCheckIn <= getCapacity()){
+                for (int i = 0; i < numberOfGuestsToCheckIn; i++){
+                    addGuestToGuestsArrayList(guestsToCheckIn.get(i));
+                }
+            }
+        }
     }
 }
