@@ -54,4 +54,11 @@ public class RoomTest {
         assertEquals(2, bedroom2.getNumberOfGuests());
     }
 
+    @Test
+    public void wontCheckInMultipleGuestsWhenRoomAlreadyOccupied(){
+        bedroom2.CheckInMultipleGuests(guests2);
+        bedroom2.CheckInMultipleGuests(guests2);
+        assertEquals(2, bedroom2.getNumberOfGuests());
+    }
+
 }
