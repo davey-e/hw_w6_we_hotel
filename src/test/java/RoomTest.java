@@ -14,17 +14,23 @@ public class RoomTest {
     Room room;
     Guest guest1;
     Guest guest2;
-    Bedroom bedroom;
-    ArrayList<Guest> guests;
+    Bedroom bedroom1;
+    Bedroom bedroom2;
+    ArrayList<Guest> guests1;
+    ArrayList<Guest> guests2;
 
     @Before
     public void before(){
         room = new Room(1);
-        bedroom = new Bedroom(1, RoomType.SINGLE, 50.00);
+        bedroom1 = new Bedroom(1, RoomType.SINGLE, 50.00);
+        bedroom2 = new Bedroom(2, RoomType.DOUBLE, 100.00);
         guest1 = new Guest("Joe Bloggs", 100.0);
         guest2 = new Guest("Jane Bloggs", 60.00);
-        guests = new ArrayList<>();
-        guests.add(guest1);
+        guests1 = new ArrayList<>();
+        guests1.add(guest1);
+        guests2 = new ArrayList<>();
+        guests2.add(guest1);
+        guests2.add(guest2);
     }
 
     @Test
@@ -39,12 +45,13 @@ public class RoomTest {
 
     @Test
     public void canAddGuestsToGuestsArrayList(){
-        bedroom.addGuestToGuestsArrayList(guest1);
+        bedroom1.addGuestToGuestsArrayList(guest1);
     }
 
     @Test
     public void canCheckMultipleGuestsIntoRoom(){
-        bedroom.CheckInMultipleGuests(guests);
-        assertEquals(1, bedroom.getNumberOfGuests());
+        bedroom2.CheckInMultipleGuests(guests2);
+        assertEquals(2, bedroom2.getNumberOfGuests());
     }
+
 }
