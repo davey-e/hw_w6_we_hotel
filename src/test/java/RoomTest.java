@@ -50,20 +50,20 @@ public class RoomTest {
 
     @Test
     public void canCheckMultipleGuestsIntoRoom(){
-        bedroom2.CheckInMultipleGuests(guests2);
+        bedroom2.checkInMultipleGuests(guests2);
         assertEquals(2, bedroom2.getNumberOfGuests());
     }
 
     @Test
     public void wontCheckInMultipleGuestsWhenRoomAlreadyOccupied(){
-        bedroom2.CheckInMultipleGuests(guests2);
-        bedroom2.CheckInMultipleGuests(guests2);
+        bedroom2.checkInMultipleGuests(guests2);
+        bedroom2.checkInMultipleGuests(guests2);
         assertEquals(2, bedroom2.getNumberOfGuests());
     }
 
     @Test
     public void wontCheckInMulipleGuestsWhenCapacityExceeded(){
-        bedroom1.CheckInMultipleGuests(guests2);
+        bedroom1.checkInMultipleGuests(guests2);
         assertEquals(0, bedroom1.getNumberOfGuests());
     }
 

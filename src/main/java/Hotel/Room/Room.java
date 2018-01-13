@@ -28,7 +28,7 @@ public class Room {
         this.guests.add(guest);
     }
 
-    public void CheckInMultipleGuests(ArrayList<Guest> guestsToCheckIn) {
+    public void checkInMultipleGuests(ArrayList<Guest> guestsToCheckIn) {
         int numberOfGuestsToCheckIn = guestsToCheckIn.size();
         if (getNumberOfGuests() == 0){
             if (numberOfGuestsToCheckIn <= getCapacity()){
