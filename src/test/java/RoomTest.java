@@ -1,4 +1,5 @@
 import Hotel.Enum.BedroomType;
+import Hotel.Enum.RoomType;
 import Hotel.Guest;
 import Hotel.Room.Bedroom;
 import Hotel.Room.DiningRoom;
@@ -23,10 +24,10 @@ public class RoomTest {
 
     @Before
     public void before(){
-        room = new Room(1);
-        bedroom1 = new Bedroom(1, BedroomType.SINGLE, 50.00);
-        bedroom2 = new Bedroom(2, BedroomType.DOUBLE, 100.00);
-        diningRoom1 = new DiningRoom(10, "Dining Room 1");
+        room = new Room(1, RoomType.BEDROOM);
+        bedroom1 = new Bedroom(RoomType.BEDROOM, 1, BedroomType.SINGLE, 50.00);
+        bedroom2 = new Bedroom(RoomType.BEDROOM, 2, BedroomType.DOUBLE, 100.00);
+        diningRoom1 = new DiningRoom(10, RoomType.DININGROOM, "Dining Room 1");
         guest1 = new Guest("Joe Bloggs", 100.0);
         guest2 = new Guest("Jane Bloggs", 60.00);
         guests1 = new ArrayList<>();
@@ -44,6 +45,11 @@ public class RoomTest {
     @Test
     public void guestsArrayListStartsEmpty(){
         assertEquals(0, room.getNumberOfGuests());
+    }
+
+    @Test
+    public void hasRoomType(){
+        assertEquals(RoomType.BEDROOM, bedroom1.getRoomType());
     }
 
     @Test

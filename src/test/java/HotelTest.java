@@ -1,4 +1,5 @@
 import Hotel.Enum.BedroomType;
+import Hotel.Enum.RoomType;
 import Hotel.Hotel;
 import Hotel.Room.Bedroom;
 import Hotel.Room.ConferenceRoom;
@@ -23,15 +24,15 @@ public class HotelTest {
 
     @Before
     public void before(){
-        bedroom1 = new Bedroom(1, BedroomType.SINGLE, 50.00);
-        bedroom2 = new Bedroom(2, BedroomType.DOUBLE, 80.00);
+        bedroom1 = new Bedroom(RoomType.BEDROOM, 1, BedroomType.SINGLE, 50.00);
+        bedroom2 = new Bedroom(RoomType.BEDROOM, 2, BedroomType.DOUBLE, 80.00);
         bedrooms = new ArrayList<>();
         bedrooms.add(bedroom1);
         bedrooms.add(bedroom2);
-        conferenceRoom1 = new ConferenceRoom(20, "Lomond", 2000.00);
+        conferenceRoom1 = new ConferenceRoom(20, RoomType.CONFERENCEROOM,"Lomond", 2000.00);
         conferenceRooms = new ArrayList<>();
         conferenceRooms.add(conferenceRoom1);
-        diningRoom1 = new DiningRoom(50, "Dining Room 1");
+        diningRoom1 = new DiningRoom(50, RoomType.DININGROOM,"Dining Room 1");
         diningRooms = new ArrayList<>();
         diningRooms.add(diningRoom1);
         hotel = new Hotel("Faulty Towers", bedrooms, conferenceRooms, diningRooms);

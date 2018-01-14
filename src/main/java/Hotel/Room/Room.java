@@ -1,4 +1,5 @@
 package Hotel.Room;
+import Hotel.Enum.RoomType;
 import Hotel.Guest;
 
 import java.util.ArrayList;
@@ -8,11 +9,13 @@ public class Room {
 
     private int capacity;
     private ArrayList<Guest> guests;
+    private RoomType roomType;
 
 
-    public Room(int capacity){
+    public Room(int capacity, RoomType roomType){
         this.capacity = capacity;
         this.guests = new ArrayList<>();
+        this.roomType = roomType;
 
     }
 
@@ -22,6 +25,10 @@ public class Room {
 
     public int getNumberOfGuests() {
         return this.guests.size();
+    }
+
+    public RoomType getRoomType() {
+        return this.roomType;
     }
 
     public void addGuestToGuestsArrayList(Guest guest){

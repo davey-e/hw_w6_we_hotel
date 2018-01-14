@@ -1,3 +1,4 @@
+import Hotel.Enum.RoomType;
 import Hotel.Room.ConferenceRoom;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,7 +11,7 @@ public class ConferenceRoomTest {
 
     @Before
     public void before(){
-        conferenceRoom = new ConferenceRoom(20, "Lomond", 2000.00);
+        conferenceRoom = new ConferenceRoom(20, RoomType.CONFERENCEROOM, "Lomond", 2000.00);
     }
 
     @Test
