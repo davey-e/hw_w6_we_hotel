@@ -21,18 +21,30 @@ public class Hotel {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public ArrayList<Bedroom> getBedrooms() {
-        return bedrooms;
+        return this.bedrooms;
     }
 
     public ArrayList<ConferenceRoom> getConferenceRooms() {
-        return conferenceRooms;
+        return this.conferenceRooms;
     }
 
     public ArrayList<DiningRoom> getDiningRooms() {
-        return diningRooms;
+        return this.diningRooms;
+    }
+
+    public int getNumberOfBedrooms() {
+        return this.bedrooms.size();
+    }
+
+    public int getNumberOfConferenceRooms() {
+        return this.conferenceRooms.size();
+    }
+
+    public int getNumberOfDiningRooms() {
+        return this.diningRooms.size();
     }
 }
