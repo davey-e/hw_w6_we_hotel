@@ -1,6 +1,7 @@
 package Hotel.Room;
 import Hotel.Enum.RoomType;
 import Hotel.Guest;
+import Hotel.Hotel;
 
 import java.util.ArrayList;
 
@@ -51,4 +52,39 @@ public class Room {
             }
         }
     }
+
+    public boolean roomExistsInHotel(Hotel hotel){
+        int numberOfRooms;
+        boolean roomFound = false;
+        switch(this.roomType) {
+            case BEDROOM:
+                numberOfRooms = hotel.getNumberOfBedrooms();
+                for (int i = 0; i < numberOfRooms; i++) {
+                    if (hotel.getBedrooms().get(i) == this) {
+                        roomFound = true;
+                    }
+                }
+                break;
+            case CONFERENCEROOM:
+                numberOfRooms = hotel.getNumberOfConferenceRooms();
+                for (int i = 0; i < numberOfRooms; i++) {
+                    if (hotel.getConferenceRooms().get(i) == this) {
+                        roomFound = true;
+                    }
+                }
+                break;
+            case DININGROOM:
+                numberOfRooms = hotel.getNumberOfDiningRooms();
+                for (int i = 0; i < numberOfRooms; i++) {
+                    if (hotel.getDiningRooms().get(i) == this) {
+                        roomFound = true;
+                    }
+                }
+                break;
+        }
+        return roomFound;
+    }
+
+
+
 }
