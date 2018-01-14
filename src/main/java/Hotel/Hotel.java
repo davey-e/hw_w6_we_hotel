@@ -80,4 +80,16 @@ public class Hotel {
         }
     }
 
+    public ArrayList<Bedroom> listVacantBedrooms(){
+        ArrayList<Bedroom> vacantBedrooms = new ArrayList<>();
+        int numberOfBedrooms = this.getNumberOfBedrooms();
+        for(int i = 0; i < numberOfBedrooms; i++){
+            Bedroom currentBedroom = this.getBedrooms().get(i);
+            if (currentBedroom.getNumberOfGuests() == 0){
+                vacantBedrooms.add(currentBedroom);
+            }
+        }
+        return vacantBedrooms;
+    }
+
 }
