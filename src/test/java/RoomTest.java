@@ -96,6 +96,14 @@ public class RoomTest {
     }
 
     @Test
+    public void canClearGuestsArrayList(){
+        bedroom1.addGuestToGuestsArrayList(guest1);
+        bedroom1.addGuestToGuestsArrayList(guest2);
+        bedroom1.clearGuestsArrayList();
+        assertEquals(0, bedroom1.getNumberOfGuests());
+    }
+
+    @Test
     public void canCheckInSingleGuestIntoRoom(){
         diningRoom1.checkInSingleGuest(guest1);
         assertEquals(1, diningRoom1.getNumberOfGuests());
@@ -126,6 +134,18 @@ public class RoomTest {
     public void wontCheckInMultipleGuestsWhenCapacityExceeded(){
         bedroom1.checkInMultipleGuests(guests2);
         assertEquals(0, bedroom1.getNumberOfGuests());
+    }
+
+    @Test
+    public void guestExistsInRoom(){
+        bedroom1.checkInMultipleGuests(guests1);
+        assertTrue(bedroom1.guestExistsInRoom(guest1));
+    }
+
+    @Test
+    public void guestDeoesntExistInRoom(){
+        bedroom1.checkInMultipleGuests(guests1);
+        assertFalse(bedroom1.guestExistsInRoom(guest2));
     }
 
     @Test

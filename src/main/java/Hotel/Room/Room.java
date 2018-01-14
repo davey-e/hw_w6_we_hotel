@@ -44,6 +44,10 @@ public class Room {
         this.guests.remove(guest);
     }
 
+    public void clearGuestsArrayList(){
+        this.guests.clear();
+    }
+
     public void checkInSingleGuest(Guest guestToCheckIn){
         if (getNumberOfGuests() +1 <= getCapacity()){
             addGuestToGuestsArrayList(guestToCheckIn);
@@ -59,6 +63,18 @@ public class Room {
                 }
             }
         }
+    }
+
+    public boolean guestExistsInRoom(Guest guest){
+        int numberOfGuests;
+        boolean guestFound = false;
+        numberOfGuests = this.getNumberOfGuests();
+        for (int i = 0; i < numberOfGuests; i++) {
+            if (this.getGuests().get(i) == guest) {
+                guestFound = true;
+            }
+        }
+        return guestFound;
     }
 
     public boolean roomExistsInHotel(Hotel hotel){
