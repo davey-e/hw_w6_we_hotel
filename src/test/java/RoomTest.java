@@ -77,8 +77,16 @@ public class RoomTest {
     }
 
     @Test
-    public void canAddGuestsToGuestsArrayList(){
+    public void canAddGuestToGuestsArrayList(){
         bedroom1.addGuestToGuestsArrayList(guest1);
+        assertEquals(1, bedroom1.getNumberOfGuests());
+    }
+
+    @Test
+    public void canRemoveGuestFromGuestsArrayList(){
+        bedroom1.addGuestToGuestsArrayList(guest1);
+        bedroom1.removeGuestFromGuestsArrayList(guest1);
+        assertEquals(0, bedroom1.getNumberOfGuests());
     }
 
     @Test

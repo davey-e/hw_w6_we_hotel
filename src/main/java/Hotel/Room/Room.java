@@ -36,6 +36,10 @@ public class Room {
         this.guests.add(guest);
     }
 
+    public void removeGuestFromGuestsArrayList(Guest guest) {
+        this.guests.remove(guest);
+    }
+
     public void checkInSingleGuest(Guest guestToCheckIn){
         if (getNumberOfGuests() +1 <= getCapacity()){
             addGuestToGuestsArrayList(guestToCheckIn);
@@ -84,7 +88,5 @@ public class Room {
         }
         return roomFound;
     }
-
-
 
 }
