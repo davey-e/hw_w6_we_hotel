@@ -48,4 +48,22 @@ public class Hotel {
         return this.diningRooms.size();
     }
 
+    public void checkGuestsIntoBedroom(Bedroom bedroom, ArrayList<Guest> guests){
+        if(bedroom.roomExistsInHotel(this)){
+            bedroom.checkInMultipleGuests(guests);
+        }
+    }
+
+    public void checkGuestsIntoConferenceRoom(ConferenceRoom conferenceRoom, ArrayList<Guest> guests){
+        if(conferenceRoom.roomExistsInHotel(this)){
+            conferenceRoom.checkInMultipleGuests(guests);
+        }
+    }
+
+    public void checkGuestIntoDiningRoom(DiningRoom diningRoom, Guest guest){
+        if(diningRoom.roomExistsInHotel(this)){
+            diningRoom.checkInSingleGuest(guest);
+        }
+    }
+
 }
