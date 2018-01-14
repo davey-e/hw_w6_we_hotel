@@ -32,6 +32,10 @@ public class Room {
         return this.roomType;
     }
 
+    public ArrayList<Guest> getGuests(){
+        return this.guests;
+    }
+
     public void addGuestToGuestsArrayList(Guest guest){
         this.guests.add(guest);
     }

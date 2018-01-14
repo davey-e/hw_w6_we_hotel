@@ -77,6 +77,12 @@ public class RoomTest {
     }
 
     @Test
+    public void hasGuestsArrayList(){
+        bedroom1.checkInMultipleGuests(guests1);
+        assertEquals(guests1, bedroom1.getGuests());
+    }
+
+    @Test
     public void canAddGuestToGuestsArrayList(){
         bedroom1.addGuestToGuestsArrayList(guest1);
         assertEquals(1, bedroom1.getNumberOfGuests());
