@@ -66,4 +66,18 @@ public class Hotel {
         }
     }
 
+    public void checkGuestsOutOfBedroom(Bedroom bedroom){
+        bedroom.clearGuestsArrayList();
+    }
+
+    public void checkGuestsOutOfConferenceRoom(ConferenceRoom conferenceRoom){
+        conferenceRoom.clearGuestsArrayList();
+    }
+
+    public void checkGuestOutOfDiningRoom(DiningRoom diningRoom, Guest guest){
+        if(diningRoom.guestExistsInRoom(guest)){
+            diningRoom.removeGuestFromGuestsArrayList(guest);
+        }
+    }
+
 }
