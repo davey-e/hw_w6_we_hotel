@@ -58,6 +58,14 @@ public class RoomTest {
     }
 
     @Test
+    public void wontCheckInSingleGuestWhenCapacityExceeded(){
+        for (int i = 0; i < 11; i++){
+            diningRoom1.checkInSingleGuest(guest1);
+        }
+        assertEquals(10, diningRoom1.getNumberOfGuests());
+    }
+
+    @Test
     public void canCheckMultipleGuestsIntoRoom(){
         bedroom2.checkInMultipleGuests(guests2);
         assertEquals(2, bedroom2.getNumberOfGuests());
