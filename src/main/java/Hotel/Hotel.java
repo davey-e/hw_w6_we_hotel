@@ -47,4 +47,5 @@ public class Hotel {
     public int getNumberOfDiningRooms() {
         return this.diningRooms.size();
     }
+
 }

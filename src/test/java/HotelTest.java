@@ -1,4 +1,4 @@
-import Hotel.Enum.RoomType;
+import Hotel.Enum.BedroomType;
 import Hotel.Hotel;
 import Hotel.Room.Bedroom;
 import Hotel.Room.ConferenceRoom;
@@ -23,8 +23,8 @@ public class HotelTest {
 
     @Before
     public void before(){
-        bedroom1 = new Bedroom(1, RoomType.SINGLE, 50.00);
-        bedroom2 = new Bedroom(2, RoomType.DOUBLE, 80.00);
+        bedroom1 = new Bedroom(1, BedroomType.SINGLE, 50.00);
+        bedroom2 = new Bedroom(2, BedroomType.DOUBLE, 80.00);
         bedrooms = new ArrayList<>();
         bedrooms.add(bedroom1);
         bedrooms.add(bedroom2);

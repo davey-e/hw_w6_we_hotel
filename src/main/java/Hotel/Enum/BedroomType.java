@@ -1,6 +1,6 @@
 package Hotel.Enum;
 
-public enum RoomType {
+public enum BedroomType {
 
     SINGLE(1),
     DOUBLE(2),
@@ -8,7 +8,7 @@ public enum RoomType {
 
     private final int occupancy;
 
-    RoomType(int occupancy){
+    BedroomType(int occupancy){
         this.occupancy = occupancy;
     }
 

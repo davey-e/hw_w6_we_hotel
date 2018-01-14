@@ -1,17 +1,17 @@
 package Hotel.Room;
 
-import Hotel.Enum.RoomType;
+import Hotel.Enum.BedroomType;
 
 public class Bedroom extends Room{
 
     private int roomNumber;
-    private RoomType roomType;
+    private BedroomType bedroomType;
     private double rate;
 
-    public Bedroom(int roomNumber, RoomType roomType, double rate){
-        super(roomType.getOccupancy());
+    public Bedroom(int roomNumber, BedroomType bedroomType, double rate){
+        super(bedroomType.getOccupancy());
         this.roomNumber = roomNumber;
-        this.roomType = roomType;
+        this.bedroomType = bedroomType;
         this.rate = rate;
     }
 
@@ -19,8 +19,8 @@ public class Bedroom extends Room{
         return roomNumber;
     }
 
-    public RoomType getRoomType() {
-        return roomType;
+    public BedroomType getBedroomType() {
+        return bedroomType;
     }
 
     public double getRate() {

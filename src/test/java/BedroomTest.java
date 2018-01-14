@@ -1,4 +1,4 @@
-import Hotel.Enum.RoomType;
+import Hotel.Enum.BedroomType;
 import Hotel.Room.Bedroom;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,7 +11,7 @@ public class BedroomTest {
 
     @Before
     public void before(){
-        bedroom = new Bedroom(1, RoomType.SINGLE, 50.00);
+        bedroom = new Bedroom(1, BedroomType.SINGLE, 50.00);
     }
 
     @Test
@@ -21,7 +21,7 @@ public class BedroomTest {
 
     @Test
     public void hasRoomType(){
-        assertEquals(RoomType.SINGLE, bedroom.getRoomType());
+        assertEquals(BedroomType.SINGLE, bedroom.getBedroomType());
     }
 
     @Test
