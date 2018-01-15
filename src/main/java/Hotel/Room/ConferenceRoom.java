@@ -14,10 +14,10 @@ public class ConferenceRoom extends Room{
 
     }
     public String getRoomName() {
-        return roomName;
+        return this.roomName;
     }
 
     public double getRate() {
-        return rate;
+        return this.rate;
     }
 }

@@ -17,14 +17,14 @@ public class Bedroom extends Room{
     }
 
     public int getRoomNumber() {
-        return roomNumber;
+        return this.roomNumber;
     }
 
     public BedroomType getBedroomType() {
-        return bedroomType;
+        return this.bedroomType;
     }
 
     public double getRate() {
-        return rate;
+        return this.rate;
     }
 }

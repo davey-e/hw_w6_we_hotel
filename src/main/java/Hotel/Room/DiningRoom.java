@@ -14,6 +14,6 @@ public class DiningRoom extends Room{
 
 
     public String getRoomName() {
-        return roomName;
+        return this.roomName;
     }
 }
