@@ -92,4 +92,8 @@ public class Hotel {
         return vacantBedrooms;
     }
 
+    public int getNumberOfVacantBedrooms(){
+        return listVacantBedrooms().size();
+    }
+
 }

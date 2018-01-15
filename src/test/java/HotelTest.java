@@ -134,4 +134,10 @@ public class HotelTest {
         assertEquals(vacantBedrooms, hotel.listVacantBedrooms());
     }
 
+    @Test
+    public void canGetNumberOfVacantRooms(){
+        hotel.checkGuestsIntoBedroom(bedroom1, guests1);
+        assertEquals(vacantBedrooms.size(), hotel.getNumberOfVacantBedrooms());
+    }
+
 }
